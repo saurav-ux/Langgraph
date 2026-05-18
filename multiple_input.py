@@ -15,7 +15,9 @@ def process_values(state: AgentState) -> AgentState:
 
         state["result"] = f"Hi there {state['name']}! Your sum = {sum(state['value'])}"
     else:
-        state["result"] = f"Hi there {state['name']}! Your sum = {max(state['value'])}"
+        state["result"] = (
+            f"Hi there {state['name']}! Your max value = {max(state['value'])}"
+        )
 
     return state
 
